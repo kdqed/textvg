@@ -1,0 +1,41 @@
+<html>
+
+<head>
+  <title>TextVG</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <script src="/scripts/textvg.js"></script>
+  <script src="/scripts/download.min.js"></script>
+  <script src="/scripts/main.js"></script>
+</head>
+
+<body onload="init()" onbeforeunload="alert('hello')">
+  <div class="header">
+    <img src="/icons/settings.png" onclick="Apparator.goto('settings')">
+    <img src="/icons/download.png" onclick="saveFile()">
+    <img src="/icons/github.png">
+    <span>TextVG</span>
+  </div>
+
+  <div class="page" id="editor" onappout="hideEditor()">
+    <textarea id="svgcode"></textarea>
+  </div>
+
+  <div class="page" id="preview" onappinto="showPreview()">
+    <svg id="svgpreview" viewBox="0 0 100 100"></svg>
+  </div>
+
+  <div class="page" id="settings" onappout="saveSettings()">
+    <h1>Settings</h1>
+    <span>Width:</span><input id="svgwidth" type="number" value=100>
+    <span>Height:</span><input id="svgheight" type="number" value=100>
+  </div>
+
+  <div class="footer">
+    <button onclick="Apparator.goto('editor')"><img src="/icons/edit.png"> Edit</button>
+    <button onclick="Apparator.goto('preview')">See <img src="/icons/play.png"></button>
+  </div>
+</body>
+
+</html>
