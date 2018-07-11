@@ -78,5 +78,5 @@ function saveFile() {
 
   filename = prompt('Enter file name','.svg');
 
-  download(`<svg width="${loadedSvgWidth}" height="${loadedSvgHeight}">\n`+textvg(loadCode())+'\n</svg>',filename,'image/svg+xml')
+  download(`<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="${loadedSvgWidth}" height="${loadedSvgHeight}">\n`+textvg(loadCode())+'\n</svg>',filename,'image/svg+xml')
 }
