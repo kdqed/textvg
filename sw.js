@@ -1,4 +1,4 @@
-// v1.0
+// v1.0.1
 self.addEventListener('install', function(e) {
   e.waitUntil(
     caches.open('the-cache').then(function(cache) {

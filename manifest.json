@@ -1,7 +1,7 @@
 {
   "name": "TextVG text based SVG editor",
   "short_name": "TextVG",
-  "display": "minimal-ui",
+  "display": "standalone",
   "start_url": "/",
   "theme_color": "#10c0a0",
   "background_color": "#06080a",
