@@ -1,0 +1,15 @@
+{
+  "name": "TextVG text based SVG editor",
+  "short_name": "TextVG",
+  "display": "minimal-ui",
+  "start_url": "/",
+  "theme_color": "#10c0a0",
+  "background_color": "#06080a",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

@@ -3,8 +3,9 @@
 <head>
   <title>TextVG</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <link rel="manifest" href="manifest.json" />
   <script src="/scripts/textvg.js"></script>
   <script src="/scripts/download.min.js"></script>
   <script src="/scripts/main.js"></script>
@@ -14,7 +15,7 @@
   <div class="header">
     <img src="/icons/settings.png" onclick="Apparator.goto('settings')">
     <img src="/icons/download.png" onclick="saveFile()">
-    <img src="/icons/github.png">
+    <img src="/icons/github.png" onclick="gotoGitHub()">
     <span>TextVG</span>
   </div>
 

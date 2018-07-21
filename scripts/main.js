@@ -30,6 +30,10 @@ function init() {
   }
   applySettings();
   window.onbeforeunload = closeApp;
+
+  navigator.serviceWorker && navigator.serviceWorker.register('./sw.js').then(function(registration) {
+    console.log('Service worker registered with scope: ', registration.scope);
+  });
 }
 
 function closeApp(){
@@ -79,4 +83,8 @@ function saveFile() {
   filename = prompt('Enter file name','.svg');
 
   download(`<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="${loadedSvgWidth}" height="${loadedSvgHeight}">\n`+textvg(loadCode())+'\n</svg>',filename,'image/svg+xml')
+}
+
+function gotoGitHub() {
+  location.href = 'https://github.com/thekarthikd/textvg';
 }
